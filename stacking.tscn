@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8dwtblkwnmba"]
+
+[ext_resource type="Texture2D" uid="uid://cek2lg5r2s8e2" path="res://leipä.svg" id="1_o4xg3"]
+[ext_resource type="Script" path="res://stacking.gd" id="1_ors28"]
+[ext_resource type="Script" path="res://Sandwich.gd" id="3_atpkw"]
+
+[node name="Stacking" type="Node2D"]
+script = ExtResource("1_ors28")
+
+[node name="Sandwich" type="Sprite2D" parent="."]
+position = Vector2(219, 636)
+texture = ExtResource("1_o4xg3")
+script = ExtResource("3_atpkw")

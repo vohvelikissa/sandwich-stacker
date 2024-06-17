@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://d32rpacji13w8"]
+
+[ext_resource type="Texture2D" uid="uid://ceq0mnlfq208j" path="res://juusto.svg" id="1_re80h"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_yj6dj"]
+[ext_resource type="Texture2D" uid="uid://dg3tfc06nfvmb" path="res://kinkku.svg" id="2_57cl7"]
+[ext_resource type="Texture2D" uid="uid://cl7rjjxfsvhjx" path="res://kurkku.svg" id="3_irisy"]
+[ext_resource type="Texture2D" uid="uid://cek2lg5r2s8e2" path="res://leipä.svg" id="4_d002w"]
+
+[node name="Main_menu" type="Node2D"]
+script = ExtResource("1_yj6dj")
+
+[node name="Button_master" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start_button" type="Button" parent="Button_master"]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 266.0
+offset_right = 890.0
+offset_bottom = 439.0
+text = "Start game"
+
+[node name="Exit_button" type="Button" parent="Button_master"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 9.725
+anchor_top = 5.25
+anchor_right = 19.325
+anchor_bottom = 9.625
+offset_left = 147.0
+offset_top = 281.0
+offset_right = -89.0
+offset_bottom = 234.0
+text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 384.0
+offset_top = 85.0
+offset_right = 909.0
+offset_bottom = 171.0
+theme_override_font_sizes/font_size = 62
+text = "Sandwich Stacker"
+
+[node name="Juusto" type="Sprite2D" parent="."]
+position = Vector2(217, 92)
+texture = ExtResource("1_re80h")
+
+[node name="Juusto2" type="Sprite2D" parent="."]
+position = Vector2(1022, 97)
+texture = ExtResource("1_re80h")
+
+[node name="Kinkku" type="Sprite2D" parent="."]
+position = Vector2(237, 326)
+texture = ExtResource("2_57cl7")
+
+[node name="Kurkku" type="Sprite2D" parent="."]
+position = Vector2(1093, 278)
+texture = ExtResource("3_irisy")
+
+[node name="Leipä" type="Sprite2D" parent="."]
+position = Vector2(383, 614)
+texture = ExtResource("4_d002w")
+
+[node name="Leipä2" type="Sprite2D" parent="."]
+position = Vector2(907, 625)
+texture = ExtResource("4_d002w")
+
+[connection signal="pressed" from="Button_master/Start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Button_master/Exit_button" to="." method="_on_exit_button_pressed"]
